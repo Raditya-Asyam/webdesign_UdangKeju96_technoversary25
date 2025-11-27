@@ -1,7 +1,7 @@
-# Raditya-Asyam-webdesign_UdangKeju96_technoversary25
+# webdesign_UdangKeju96_technoversary25
 1. Nama Kelompok: UdangKeju96
 2. Nama Anggota:
-- Muhammad Raditya Asyam
+- Muhammad Raditya Asyam 
 - Sunarjo 
 - Muhammad Taufiq Hidayat
 3. Asal Instansi: Universitas Majalengka
