@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kolalimbah</title>
+    <link rel="stylesheet" href="cssweb/gayakami.css">
+</head>
+<body>
+<header>
+  <!-- Logo Gambar -->
+  <div class="logo">
+  <img src="gambarweb/Logo Kolalimbah.png" alt="Logo">
+</div>
+
+  <!-- Tombol Hamburger -->
+  <button class="menu-btn" id="menuBtn">
+    ☰
+  </button>
+
+  <!-- Fitur Navigasi -->
+  <nav id="sideNav">
+    <a href="beranda.html">Beranda</a>
+    <div class="dropdown">
+    <button class="dropbtn">Konten▾</button>
+    <div class="dropdown-content">
+      <a href="konten.html">Semua</a>
+      <a href="artikel.html">Artikel</a>
+      <a href="video.html">Video</a>
+    </div>
+  </div>
+    <a href="tentang.html">Tentang</a>
+    <a href="kontak.html">Kontak</a>
+  </nav>
+</header>
+
+<main class="article-container">
+  <h1 class="article-title">Dampak Dari Limbah Elektronik</h1>
+
+  <img src="gambarweb/Penumpukan E-waste.jpg" alt="Article Image" class="article-image">
+
+  <div class="article-meta">
+  <span class="article-author">Ditulis oleh: World Health Organization</span>
+  <span class="article-date">Diterbitkan di: 1 Oktober 2024</span>
+</div>
+
+  <div class="article-text">
+    <p>
+      Limbah elektronik merupakan salah satu jenis limbah padat yang pertumbuhannya paling cepat. 
+      Pada tahun 2022, sekitar 62 juta ton limbah elektronik diproduksi secara global, tetapi hanya 22,3% yang dikumpulkan dan didaur ulang secara resmi.
+    </p>
+    <p>
+      Limbah elektronik sering kali mengandung banyak bahan kimia beracun, 
+      hingga 1.000 zat berbeda dapat terlepas selama daur ulang yang tidak aman.
+      Salah satu zat yang umum dan berbahaya adalah timbal, 
+      yang dilepaskan jika daur ulang atau penyimpanan tidak dikelola dengan baik.
+    <p>
+      Daur ulang limbah elektronik informal 
+      (seperti pembakaran terbuka, mandi asam, pembongkaran manual) membuat orang terpapar polutan berbahaya.
+      Anak-anak dan wanita hamil sangat rentan: paparan telah dikaitkan dengan hasil kelahiran negatif 
+      (misalnya, lahir mati, kelahiran prematur), masalah neurologis/perkembangan, dan masalah pernapasan.
+      Banyak anak-anak terlibat langsung dalam kegiatan daur ulang limbah elektronik 
+      (seperti memilah dan membongkar), terkadang sebagai tenaga kerja murah.
+    </p>
+    <p>
+      Polutan beracun dari praktik daur ulang yang tidak aman ini dapat mencemari udara, tanah, debu, dan air, 
+      yang tidak hanya memengaruhi lokasi daur ulang tetapi juga masyarakat sekitar.
+      Polutan dapat berpindah jauh dari sumbernya, sehingga membahayakan populasi yang jauh.
+    </p>
+    <p>
+      WHO merekomendasikan beberapa tindakan seperti 
+      memperkuat dan menegakkan peraturan internasional dan nasional tentang limbah elektronik, 
+      memantau lokasi pembuangan limbah elektronik dan masyarakat setempat untuk melacak polusi dan dampak kesehatan,
+      meningkatkan praktik daur ulang informal agar lebih aman, melindungi pekerja, dan melestarikan mata pencaharian,
+      mendidik pekerja kesehatan tentang risiko yang ditimbulkan limbah elektronik, terutama bagi anak-anak,
+      dan menghilangkan pekerja anak dalam daur ulang limbah elektronik.
+    </p>
+  </div>
+
+<div class="article-references">
+  <h2>Referensi</h2>
+  <ol>
+    <li>
+      WHO (2024). <i>Electronic waste (e-waste)</i>.  
+      <a href="https://www.who.int/news-room/fact-sheets/detail/electronic-waste-(e-waste)" target="_blank">https://www.who.int/news-room</a>
+    </li>
+  </ol>
+</div>
+</main>
+
+<!-- FOOTER -->
+<footer class="main-footer">
+   <div class="footer-links">
+    <a href="beranda.html">Beranda</a>
+    <a href="konten.html">Konten</a>
+    <a href="tentang.html">Tentang</a>
+    <a href="kontak.html">Kontak</a>
+  </div>
+  <div class="footer-content">
+    <p>Dibuat Oleh UdangKeju96</p>
+     <p>Ditunjukkan Untuk TechnoVersary2025</p>
+    <p>&copy; Universitas Majalengka</p>
+  </div>
+</footer>
+
+<script>
+document.getElementById("menuBtn").addEventListener("click", function() {
+  document.getElementById("sideNav").classList.toggle("open");
+});
+
+document.querySelectorAll(".dropdown").forEach(drop => {
+  drop.addEventListener("click", (e) => {
+
+    e.stopPropagation();
+
+    document.querySelectorAll(".dropdown").forEach(other => {
+      if (other !== drop) other.classList.remove("active");
+    });
+
+    drop.classList.toggle("active");
+  });
+});
+
+document.addEventListener("click", () => {
+  document.querySelectorAll(".dropdown").forEach(drop => {
+    drop.classList.remove("active");
+  });
+});
+</script>
+
+</body>
+</html>

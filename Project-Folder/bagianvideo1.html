@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kolalimbah</title>
+    <link rel="stylesheet" href="cssweb/gayakami.css">
+</head>
+<body>
+<header>
+  <!-- Logo Gambar -->
+  <div class="logo">
+  <img src="gambarweb/Logo Kolalimbah.png" alt="Logo">
+</div>
+
+  <!-- Tombol Hamburger -->
+  <button class="menu-btn" id="menuBtn">
+    ☰
+  </button>
+
+  <!-- Fitur Navigasi -->
+  <nav id="sideNav">
+    <a href="beranda.html">Beranda</a>
+    <div class="dropdown">
+    <button class="dropbtn">Konten▾</button>
+    <div class="dropdown-content">
+      <a href="konten.html">Semua</a>
+      <a href="artikel.html">Artikel</a>
+      <a href="video.html">Video</a>
+    </div>
+  </div>
+    <a href="tentang.html">Tentang</a>
+    <a href="kontak.html">Kontak</a>
+  </nav>
+</header>
+
+<main class="article-container">
+  <h1 class="article-title">Apa Itu Limbah Elektronik (Bahasa Inggris)</h1>
+
+  <!-- Responsive Video Wrapper -->
+  <div class="video-wrapper">
+    <video controls>
+      <source src="videoweb/What is E-WASTE.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <div class="article-meta">
+  <span class="article-author">Disebar oleh: Peekaboo Kidz</span>
+  <span class="article-date">Dirilis di: 27 Maret 2020</span>
+</div>
+
+  <div class="article-text">
+    <p>
+     Hai anak-anak, dalam video ini, Dr. Binocs akan menjelaskan, Apa itu Limbah Elektronik?, 
+     Apa Penyebab Limbah Elektronik?, Pastikan Anda menonton seluruh video untuk mengetahui 
+     semua jawaban atas pertanyaan Anda yang membuat penasaran!
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="main-footer">
+   <div class="footer-links">
+    <a href="beranda.html">Beranda</a>
+    <a href="kontak.html">Konten</a>
+    <a href="tentang.html">Tentang</a>
+    <a href="kontak.html">Kontak</a>
+  </div>
+  <div class="footer-content">
+    <p>Dibuat Oleh UdangKeju96</p>
+    <p>Ditunjukkan Untuk TechnoVersary2025</p>
+    <p>&copy; Universitas Majalengka</p>
+  </div>
+</footer>
+
+<script>
+document.getElementById("menuBtn").addEventListener("click", function() {
+  document.getElementById("sideNav").classList.toggle("open");
+});
+
+document.querySelectorAll(".dropdown").forEach(drop => {
+  drop.addEventListener("click", (e) => {
+
+    e.stopPropagation();
+
+    document.querySelectorAll(".dropdown").forEach(other => {
+      if (other !== drop) other.classList.remove("active");
+    });
+
+    drop.classList.toggle("active");
+  });
+});
+
+document.addEventListener("click", () => {
+  document.querySelectorAll(".dropdown").forEach(drop => {
+    drop.classList.remove("active");
+  });
+});
+</script>
+
+</body>
+</html>

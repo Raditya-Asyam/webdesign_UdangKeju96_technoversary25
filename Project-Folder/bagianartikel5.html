@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kolalimbah</title>
+    <link rel="stylesheet" href="cssweb/gayakami.css">
+</head>
+<body>
+<header>
+  <!-- Logo Gambar -->
+  <div class="logo">
+  <img src="gambarweb/Logo Kolalimbah.png" alt="Logo">
+</div>
+
+  <!-- Tombol Hamburger -->
+  <button class="menu-btn" id="menuBtn">
+    ☰
+  </button>
+
+  <!-- Fitur Navigasi -->
+  <nav id="sideNav">
+    <a href="beranda.html">Beranda</a>
+    <div class="dropdown">
+    <button class="dropbtn">Konten▾</button>
+    <div class="dropdown-content">
+      <a href="konten.html">Semua</a>
+      <a href="artikel.html">Artikel</a>
+      <a href="video.html">Video</a>
+    </div>
+  </div>
+    <a href="tentang.html">Tentang</a>
+    <a href="kontak.html">Kontak</a>
+  </nav>
+</header>
+
+<main class="article-container">
+  <h1 class="article-title">Status Pengelolaan Limbah Elektronik Di Jakarta</h1>
+
+  <img src="gambarweb/Tempat Sampah Umum.jpeg" alt="Article Image" class="article-image">
+
+  <div class="article-meta">
+  <span class="article-author">Ditulis oleh: H. Soesanto</span>
+  <span class="article-date">Diterbitkan di: 5 Desember 2025</span>
+</div>
+
+  <div class="article-text">
+    <p>
+     Studi ini menggambarkan situasi terkini pengelolaan limbah elektronik rumah tangga di Jakarta, 
+     menunjukkan bahwa Pemerintah Provinsi Jakarta menangani limbah elektronik melalui tiga metode pengumpulan utama: pengambilan di rumah, kotak pembuangan, 
+     dan pemilahan di tempat pengumpulan sampah sementara, dengan sebagian besar limbah elektronik berasal dari tempat pembuangan sampah sementara. Pada tahun 2021, 
+     Jakarta secara formal mengelola 33.289 kg limbah elektronik rumah tangga, sebagian besar berupa televisi, lampu, baterai, kartrid printer, dan barang-barang campuran, meskipun peraturan nasional untuk klasifikasi masih kurang. 
+     Pencatatan data hanya sebagian digital yaitu warga meminta pengambilan secara daring, tetapi penimbangan dan dokumentasi di gudang masih manual, yang menyebabkan pelacakan dan umpan balik terbatas. 
+     Studi ini menyimpulkan bahwa sistem Jakarta berfungsi tetapi belum efektif, 
+     merekomendasikan integrasi digital yang lebih kuat, kolaborasi multi-aktor yang lebih baik, 
+     dan pembuatan peraturan khusus untuk mendukung tujuan ekonomi sirkular dan meningkatkan pengumpulan, pemantauan, dan daur ulang limbah elektronik.
+    </p>
+  </div>
+
+<div class="article-references">
+  <h2>Referensi</h2>
+  <ol>
+    <li>
+       H. Soesanto (2025). <i>Current status of household e-waste management in Jakarta, Indonesia</i>.  
+      <a href="https://iopscience.iop.org/article/10.1088/1755-1315/1109/1/012042" target="_blank">https://iopscience.iop.org/article/10.1088/</a>
+    </li>
+  </ol>
+</div>
+</main>
+
+<!-- FOOTER -->
+<footer class="main-footer">
+   <div class="footer-links">
+    <a href="beranda.html">Beranda</a>
+    <a href="konten.html">Konten</a>
+    <a href="tentang.html">Tentang</a>
+    <a href="kontak.html">Kontak</a>
+  </div>
+  <div class="footer-content">
+    <p>Dibuat Oleh UdangKeju96</p>
+    <p>Ditunjukkan Untuk TechnoVersary2025</p>
+    <p>&copy; Universitas Majalengka</p>
+  </div>
+</footer>
+
+<script>
+document.getElementById("menuBtn").addEventListener("click", function() {
+  document.getElementById("sideNav").classList.toggle("open");
+});
+
+document.querySelectorAll(".dropdown").forEach(drop => {
+  drop.addEventListener("click", (e) => {
+
+    e.stopPropagation();
+
+    document.querySelectorAll(".dropdown").forEach(other => {
+      if (other !== drop) other.classList.remove("active");
+    });
+
+    drop.classList.toggle("active");
+  });
+});
+
+document.addEventListener("click", () => {
+  document.querySelectorAll(".dropdown").forEach(drop => {
+    drop.classList.remove("active");
+  });
+});
+</script>
+
+</body>
+</html>

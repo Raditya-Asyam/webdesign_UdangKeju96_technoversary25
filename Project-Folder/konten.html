@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kolalimbah</title>
+    <link rel="stylesheet" href="cssweb/gayakami.css">
+</head>
+<body>
+   <header>
+  <!-- Logo Gambar -->
+  <div class="logo">
+  <img src="gambarweb/Logo Kolalimbah.png" alt="Logo">
+</div>
+
+  <!-- Tombol Hamburger -->
+  <button class="menu-btn" id="menuBtn">
+    ☰
+  </button>
+
+  <!-- Fitur Navigasi -->
+  <nav id="sideNav">
+    <a href="beranda.html">Beranda</a>
+    <div class="dropdown">
+    <button class="dropbtn">Konten▾</button>
+    <div class="dropdown-content">
+      <a href="konten.html">Semua</a>
+      <a href="artikel.html">Artikel</a>
+      <a href="video.html">Video</a>
+    </div>
+  </div>
+    <a href="tentang.html">Tentang</a>
+    <a href="kontak.html">Kontak</a>
+  </nav>
+</header>
+
+<!-- BAGIAN GALERI KARTU -->
+
+<!--Bagian Artikel-->
+<section class="card-gallery">
+  <h2 class="gallery-title">Konten Kami</h2>
+  <h3 class="gallery-subtitle">Artikel</h3>
+
+  <div class="cards">
+
+    <a href="bagianartikel1.html" class="card"> 
+      <div>
+      <img src="gambarweb/Penumpukan E-waste.jpg" alt="Artikel 1">
+      <h3>Dampak Dari Limbah Elektronik</h3>
+      <p>Limbah elektronik merupakan salah satu jenis limbah padat yang pertumbuhannya paling cepat...</p>
+    </div>
+</a> 
+
+ <a href="bagianartikel2.html" class="card"> 
+    <div>
+      <img src="gambarweb/Karikatur E-waste.png" alt="Artikel 2">
+      <h3>Pandangan Global Dari Daur Ulang Limbah Elektronik</h3>
+      <p>Limbah elektronik (e-waste) merupakan salah satu aliran limbah...</p>
+    </div>
+</a>
+
+<a href="bagianartikel3.html" class="card"> 
+    <div>
+      <img src="gambarweb/E-waste recyling.jpeg" alt="Artikel 3">
+      <h3>Proses Daur Ulang Limbah Elektronik</h3>
+      <p>Daur ulang limbah elektronik melibatkan beberapa langkah...</p>
+    </div>
+</a>   
+</div>
+  <!-- TOMBOL LIHAT BANYAK -->
+  <a href="artikel.html" class="see-more-btn">Lihat Banyak</a>
+
+  <!--Bagian video-->
+   <h3 class="gallery-subtitle">Video</h3>
+   <div class="cards">
+
+  <a href="bagianvideo1.html" class="card">
+    <div>
+      <img src="gambarweb/What Is E-Waste (Thumbnail).jpg" alt="Video 1">
+      <h3>Apa Itu Limbah Elektronik (Bahasa Inggris)</h3>
+      <p>Hai anak-anak, dalam video ini, Dr. Binocs akan...</p>
+    </div>
+  </a>
+  
+  <a href="bagianvideo2.html" class="card">
+    <div>
+      <img src="gambarweb/Thumbnail Animasi Daur Ulang.jpg" alt="Video 2">
+      <h3>Harus Hati-Hati Nanganin Sampah Elektronik</h3>
+      <p>Coba inget-inget kapan terakhir kali kalian ganti handphone...</p>
+    </div>
+</a>
+    
+<a href="bagianvideo3.html" class="card">
+    <div>
+      <img src="gambarweb/Thumbnail Bahaya Sampah Elektronik.jpg" alt="Video 3">
+      <h3>Bahaya Sampah Elektronik</h3>
+      <p>Karya dibuat oleh Usha Mardhatillah...</p>
+    </div>
+</a>
+
+  </div>
+  <!-- TOMBOL LIHAT BANYAK -->
+  <a href="video.html" class="see-more-btn">Lihat Banyak</a>
+</section>
+
+
+<!-- FOOTER -->
+<footer class="main-footer">
+   <div class="footer-links">
+    <a href="beranda.html">Beranda</a>
+    <a href="konten.html">Konten</a>
+    <a href="tentang.html">Tentang</a>
+    <a href="kontak.html">Kontak</a>
+  </div>
+  <div class="footer-content">
+    <p>Dibuat Oleh UdangKeju96</p>
+    <p>Ditunjukkan Untuk TechnoVersary2025</p>
+    <p>&copy; Universitas Majalengka</p>
+  </div>
+</footer>
+
+
+<script>
+document.getElementById("menuBtn").addEventListener("click", function() {
+  document.getElementById("sideNav").classList.toggle("open");
+});
+
+document.querySelectorAll(".dropdown").forEach(drop => {
+  drop.addEventListener("click", (e) => {
+
+    e.stopPropagation();
+
+    document.querySelectorAll(".dropdown").forEach(other => {
+      if (other !== drop) other.classList.remove("active");
+    });
+
+    drop.classList.toggle("active");
+  });
+});
+
+document.addEventListener("click", () => {
+  document.querySelectorAll(".dropdown").forEach(drop => {
+    drop.classList.remove("active");
+  });
+});
+</script>
+
+</body>
+</html>

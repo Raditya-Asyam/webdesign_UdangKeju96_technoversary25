@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kolalimbah</title>
+    <link rel="stylesheet" href="cssweb/gayakami.css">
+</head>
+<body>
+   <header>
+  <!-- Logo Gambar -->
+  <div class="logo">
+  <img src="gambarweb/Logo Kolalimbah.png" alt="Logo">
+</div>
+
+  <!-- Tombol Hamburger -->
+  <button class="menu-btn" id="menuBtn">
+    ☰
+  </button>
+
+  <!-- Fitur Navigasi -->
+  <nav id="sideNav">
+    <a href="beranda.html">Beranda</a>
+    <div class="dropdown">
+    <button class="dropbtn">Konten▾</button>
+    <div class="dropdown-content">
+      <a href="konten.html">Semua</a>
+      <a href="artikel.html">Artikel</a>
+      <a href="video.html">Video</a>
+    </div>
+  </div>
+    <a href="tentang.html">Tentang</a>
+    <a href="kontak.html">Kontak</a>
+  </nav>
+</header>
+
+<section class="contact-section">
+  <div class="contact-box">
+    <h2>Kontak Kami</h2>
+    
+    <form class="contact-form">
+      <label>Nama Anda</label>
+      <input type="text" placeholder="Masukkan nama Anda">
+
+      <label>Email Anda</label>
+      <input type="email" placeholder="Masukkan email Anda">
+
+      <label>Nomor Telepon Anda</label>
+      <input type="tel" placeholder="Masukkan nomor telepon Anda">
+
+      <label>Pesan Anda</label>
+      <textarea rows="5" placeholder="Tulis pesan Anda..."></textarea>
+
+      <button type="submit">Kirim Pesan</button>
+    </form>
+  </div>
+</section>
+
+<!-- BUSINESS CONTACT INFO SECTION -->
+<section class="business-contact-info">
+  <p><strong>Email Bisnis:</strong> udangkeju96@gmail.com</p>
+  <p><strong>Nomor Telepon:</strong> +62-823-1730-0027</p>
+    <p><strong>Alamat Bisnis:</strong> Jl. Pepaya No. 96 Sukahaji Majalengka</p>
+</section>
+
+<!-- FOOTER -->
+<footer class="main-footer">
+   <div class="footer-links">
+    <a href="beranda.html">Beranda</a>
+    <a href="konten.html">Konten</a>
+    <a href="tentang.html">Tentang</a>
+    <a href="kontak.html">Kontak</a>
+  </div>
+  <div class="footer-content">
+    <p>Dibuat Oleh UdangKeju96</p>
+    <p>Ditunjukkan Untuk TechnoVersary2025</p>
+    <p>&copy; Universitas Majalengka</p>
+  </div>
+</footer>
+
+<script>
+document.getElementById("menuBtn").addEventListener("click", function() {
+  document.getElementById("sideNav").classList.toggle("open");
+});
+
+document.querySelectorAll(".dropdown").forEach(drop => {
+  drop.addEventListener("click", (e) => {
+
+    e.stopPropagation();
+
+    document.querySelectorAll(".dropdown").forEach(other => {
+      if (other !== drop) other.classList.remove("active");
+    });
+
+    drop.classList.toggle("active");
+  });
+});
+
+document.addEventListener("click", () => {
+  document.querySelectorAll(".dropdown").forEach(drop => {
+    drop.classList.remove("active");
+  });
+});
+</script>
+
+</body>
+</html>

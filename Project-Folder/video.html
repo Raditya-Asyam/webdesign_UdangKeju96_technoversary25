@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kolalimbah</title>
+    <link rel="stylesheet" href="cssweb/gayakami.css">
+</head>
+<body>
+   <header>
+  <!-- Logo Gambar -->
+  <div class="logo">
+  <img src="gambarweb/Logo Kolalimbah.png" alt="Logo">
+</div>
+
+  <!-- Tombol Hamburger -->
+  <button class="menu-btn" id="menuBtn">
+    ☰
+  </button>
+
+  <!-- Fitur Navigasi -->
+  <nav id="sideNav">
+    <a href="beranda.html">Beranda</a>
+    <div class="dropdown">
+    <button class="dropbtn">Konten▾</button>
+    <div class="dropdown-content">
+      <a href="konten.html">Semua</a>
+      <a href="artikel.html">Artikel</a>
+      <a href="video.html">Video</a>
+    </div>
+  </div>
+    <a href="tentang.html">Tentang</a>
+    <a href="kontak.html">Kontak</a>
+  </nav>
+</header>
+
+<!-- BAGIAN CARI -->
+<div class="search-container">
+  <input type="text" id="gallerySearch" placeholder="Cari Video...">
+</div>
+
+<!-- BAGIAN GALERI -->
+<section class="gallery-section" id="gallerySection">
+  <div class="gallery-cards">
+
+    <a data-title="Apa Itu Limbah Elektronik (Bahasa Inggris)" class="gallery-card"
+    href="bagianvideo1.html">
+    <div>
+      <img src="gambarweb/What Is E-Waste (Thumbnail).jpg" alt="Video 1">
+      <h3>Apa Itu Limbah Elektronik (Bahasa Inggris)</h3>
+      <p>Hai anak-anak, dalam video ini, Dr. Binocs akan...</p>
+    </div>
+    </a>
+
+    <a data-title="Harus Hati-Hati Nanganin Sampah Elektronik" class="gallery-card"
+    href="bagianvideo2.html">
+    <div>
+      <img src="gambarweb/Thumbnail Animasi Daur Ulang.jpg" alt="Video 2">
+      <h3>Harus Hati-Hati Nanganin Sampah Elektronik</h3>
+      <p>Coba inget-inget kapan terakhir kali kalian ganti handphone...</p>
+    </div>
+    </a>
+
+    <a data-title="Bahaya Sampah Elektronik" class="gallery-card"
+    href="bagianvideo3.html">
+    <div>
+      <img src="gambarweb/Thumbnail Bahaya Sampah Elektronik.jpg" alt="Video 3">
+      <h3>Bahaya Sampah Elektronik</h3>
+      <p>Karya dibuat oleh Usha Mardhatillah...</p>
+    </div>
+    </a>
+
+  <a data-title="Jangan Menimbun Sampah Elektronik Di Rumah" class="gallery-card"
+    href="bagianvideo4.html">
+    <div>
+      <img src="gambarweb/Thumbnail Sampah Elektronik Dari Kumparan.jpg" alt="Video 4">
+      <h3>Jangan Menimbun Sampah Elektronik Di Rumah</h3>
+      <p>Banyak yang tidak menyadari kalau menimbun sampah elektronik di rumah...</p>
+    </div>
+  </a>
+
+  <a data-title="Bagaimana Limbah Elektronik Didaur Ulang (Bahasa Inggris)" class="gallery-card"
+    href="bagianvideo5.html">
+    <div>
+      <img src="gambarweb/Thumbnail E-Waste Recyling Tom Mills.jpg" alt="Video 5">
+      <h3>Bagaimana Limbah Elektronik Didaur Ulang (Bahasa Inggris)</h3>
+      <p>Beginilah cara sampah elektronik didaur ulang...</p>
+    </div>
+  </a>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="main-footer">
+   <div class="footer-links">
+    <a href="beranda.html">Beranda</a>
+    <a href="konten.html">Konten</a>
+    <a href="tentang.html">Tentang</a>
+    <a href="kontak.html">Kontak</a>
+  </div>
+  <div class="footer-content">
+    <p>Dibuat Oleh UdangKeju96</p>
+    <p>Ditunjukkan Untuk TechnoVersary2025</p>
+    <p>&copy; Universitas Majalengka</p>
+  </div>
+</footer>
+
+
+<script>
+document.getElementById("menuBtn").addEventListener("click", function() {
+  document.getElementById("sideNav").classList.toggle("open");
+});
+
+document.querySelectorAll(".dropdown").forEach(drop => {
+  drop.addEventListener("click", (e) => {
+
+    e.stopPropagation();
+
+    document.querySelectorAll(".dropdown").forEach(other => {
+      if (other !== drop) other.classList.remove("active");
+    });
+
+    drop.classList.toggle("active");
+  });
+});
+
+document.addEventListener("click", () => {
+  document.querySelectorAll(".dropdown").forEach(drop => {
+    drop.classList.remove("active");
+  });
+});
+
+const searchInput = document.getElementById('gallerySearch');
+const galleryCards = document.querySelectorAll('.gallery-card');
+
+searchInput.addEventListener('input', () => {
+  const query = searchInput.value.toLowerCase();
+  
+  galleryCards.forEach(card => {
+    const title = card.dataset.title.toLowerCase();
+    if (title.includes(query)) {
+      card.style.display = 'flex';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+});
+
+</script>
+
+</body>
+</html>

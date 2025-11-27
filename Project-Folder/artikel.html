@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kolalimbah</title>
+    <link rel="stylesheet" href="cssweb/gayakami.css">
+</head>
+<body>
+   <header>
+  <!-- Logo Gambar -->
+  <div class="logo">
+  <img src="gambarweb/Logo Kolalimbah.png" alt="Logo">
+</div>
+
+  <!-- Tombol Hamburger -->
+  <button class="menu-btn" id="menuBtn">
+    ☰
+  </button>
+
+  <!-- Fitur Navigasi -->
+  <nav id="sideNav">
+    <a href="beranda.html">Beranda</a>
+    <div class="dropdown">
+    <button class="dropbtn">Konten▾</button>
+    <div class="dropdown-content">
+      <a href="konten.html">Semua</a>
+      <a href="artikel.html">Artikel</a>
+      <a href="video.html">Video</a>
+    </div>
+  </div>
+    <a href="tentang.html">Tentang</a>
+    <a href="kontak.html">Kontak</a>
+  </nav>
+</header>
+
+<!-- BAGIAN CARI -->
+<div class="search-container">
+  <input type="text" id="gallerySearch" placeholder="Cari Artikel...">
+</div>
+
+<!-- BAGIAN GALERI -->
+<section class="gallery-section" id="gallerySection">
+  <div class="gallery-cards">
+
+    <a data-title="Dampak Dari Limbah Elektronik" class="gallery-card" 
+    href="bagianartikel1.html">
+    <div>
+      <img src="gambarweb/Penumpukan E-waste.jpg" alt="Artikel 1">
+      <h3>Dampak Dari Limbah Elektronik</h3>
+      <p>Limbah elektronik merupakan salah satu jenis limbah padat yang pertumbuhannya paling cepat...</p>
+    </div>
+    </a>
+
+    <a data-title="Pandangan Global Dari Daur Ulang Limbah Elektronik" class="gallery-card" 
+    href="bagianartikel2.html">
+    <div class="gallery-card">
+      <img src="gambarweb/Karikatur E-waste.png" alt="Artikel 2">
+      <h3>Pandangan Global Dari Daur Ulang Limbah Elektronik</h3>
+      <p>Limbah elektronik (e-waste) merupakan salah satu aliran limbah...</p>
+    </div>
+    </a>
+
+   <a data-title="Proses Daur Ulang Limbah Elektronik" class="gallery-card" 
+   href="bagianartikel3.html">
+    <div class="gallery-card">
+      <img src="gambarweb/E-waste recyling.jpeg" alt="Artikel 3">
+      <h3>Proses Daur Ulang Limbah Elektronik</h3>
+      <p>Daur ulang limbah elektronik melibatkan beberapa langkah...</p>
+    </div>
+    </a>
+
+    <a data-title="Analisis Data Limbah Elektronik" class="gallery-card" 
+    href="bagianartikel4.html">
+    <div class="gallery-card">
+      <img src="gambarweb/Gambar Diagram Bar.jpg" alt="Artikel 4">
+      <h3>Analisis Data Limbah Elektronik</h3>
+      <p>Diatas itu adalah...</p>
+    </div>
+    </a>
+
+  <a data-title="Status Pengelolaan Limbah Elektronik Di Jakarta" class="gallery-card" 
+    href="bagianartikel5.html">
+    <div class="gallery-card">
+      <img src="gambarweb/Tempat Sampah Umum.jpeg" alt="Artikel 4">
+      <h3>Status Pengelolaan Limbah Elektronik Di Jakarta</h3>
+      <p>Studi ini menggambarkan situasi terkini...</p>
+    </div>
+</a>
+
+<a data-title="Karakteristik Konsumen Terhadap Limbah Elektronik Di Malaysia" class="gallery-card" 
+    href="bagianartikel6.html">
+    <div class="gallery-card">
+      <img src="gambarweb/Gambar Laptop Rusak.png" alt="Artikel 4">
+      <h3>Karakteristik Konsumen Terhadap Limbah Elektronik Di Malaysia</h3>
+      <p>Studi ini mengkaji perilaku konsumen terkait...</p>
+    </div>
+</a>
+</section>
+
+<!-- FOOTER -->
+<footer class="main-footer">
+   <div class="footer-links">
+    <a href="beranda.html">Beranda</a>
+    <a href="konten.html">Konten</a>
+    <a href="tentang.html">Tentang</a>
+    <a href="kontak.html">Kontak</a>
+  </div>
+  <div class="footer-content">
+    <p>Dibuat Oleh UdangKeju96</p>
+    <p>Ditunjukkan Untuk TechnoVersary2025</p>
+    <p>&copy; Universitas Majalengka</p>
+  </div>
+</footer>
+
+
+<script>
+document.getElementById("menuBtn").addEventListener("click", function() {
+  document.getElementById("sideNav").classList.toggle("open");
+});
+
+document.querySelectorAll(".dropdown").forEach(drop => {
+  drop.addEventListener("click", (e) => {
+
+    e.stopPropagation();
+
+    document.querySelectorAll(".dropdown").forEach(other => {
+      if (other !== drop) other.classList.remove("active");
+    });
+
+    drop.classList.toggle("active");
+  });
+});
+
+document.addEventListener("click", () => {
+  document.querySelectorAll(".dropdown").forEach(drop => {
+    drop.classList.remove("active");
+  });
+});
+
+const searchInput = document.getElementById('gallerySearch');
+const galleryCards = document.querySelectorAll('.gallery-card');
+
+searchInput.addEventListener('input', () => {
+  const query = searchInput.value.toLowerCase();
+  
+  galleryCards.forEach(card => {
+    const title = card.dataset.title.toLowerCase();
+    if (title.includes(query)) {
+      card.style.display = 'flex';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+});
+
+</script>
+
+</body>
+</html>

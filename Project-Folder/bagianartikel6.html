@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kolalimbah</title>
+    <link rel="stylesheet" href="cssweb/gayakami.css">
+</head>
+<body>
+<header>
+  <!-- Logo Gambar -->
+  <div class="logo">
+  <img src="gambarweb/Logo Kolalimbah.png" alt="Logo">
+</div>
+
+  <!-- Tombol Hamburger -->
+  <button class="menu-btn" id="menuBtn">
+    ☰
+  </button>
+
+  <!-- Fitur Navigasi -->
+  <nav id="sideNav">
+    <a href="beranda.html">Beranda</a>
+    <div class="dropdown">
+    <button class="dropbtn">Konten▾</button>
+    <div class="dropdown-content">
+      <a href="konten.html">Semua</a>
+      <a href="artikel.html">Artikel</a>
+      <a href="video.html">Video</a>
+    </div>
+  </div>
+    <a href="tentang.html">Tentang</a>
+    <a href="kontak.html">Kontak</a>
+  </nav>
+</header>
+
+<main class="article-container">
+  <h1 class="article-title">Karakteristik Konsumen Terhadap Limbah Elektronik Di Malaysia</h1>
+
+  <img src="gambarweb/Gambar Laptop Rusak.png" alt="Article Image" class="article-image">
+
+  <div class="article-meta">
+  <span class="article-author">Ditulis oleh: D. D. Sofian</span>
+  <span class="article-date">Diterbitkan di: 5 Desember 2025</span>
+</div>
+
+  <div class="article-text">
+    <p>
+     Studi ini mengkaji perilaku konsumen terkait pengelolaan limbah elektronik rumah tangga di Putrajaya, Malaysia, 
+     untuk mendukung pengembangan sistem nasional yang lebih berkelanjutan. Melalui survei terhadap 50 rumah tangga, peneliti menemukan bahwa meskipun banyak penduduk memahami bahwa limbah elektronik mengandung bahan berbahaya dan dapat didaur ulang, 
+     kesadaran akan aturan pembuangan yang tepat, pusat daur ulang, dan kebijakan pemerintah secara umum masih rendah. Sebagian besar rumah tangga masih membuang barang elektronik lama dengan cara menyimpannya, menghibahkannya, menjualnya secara informal, 
+     atau mencampurnya dengan sampah biasa, sementara hanya sebagian kecil yang mempraktikkan daur ulang yang tepat. Meskipun demikian, penduduk menunjukkan keinginan yang kuat untuk mendukung pengelolaan berkelanjutan, 80% bersedia membayar biaya pembuangan yang kecil, 
+     dan sebagian besar terbuka terhadap perubahan gaya hidup untuk mengurangi limbah elektronik. Analisis statistik menyoroti usia sebagai faktor paling berpengaruh dalam pengetahuan dan kesadaran. Studi ini menyimpulkan bahwa Malaysia membutuhkan pendidikan yang lebih baik, regulasi yang lebih jelas, 
+     infrastruktur yang lebih baik, dan integrasi pendaur ulang informal untuk meningkatkan tingkat daur ulang dan bergerak menuju sistem pengelolaan limbah elektronik yang lebih efektif dan berkelanjutan.
+    </p>
+  </div>
+
+<div class="article-references">
+  <h2>Referensi</h2>
+  <ol>
+    <li>
+      D. D. Sofian (2025). <i>Characteristics of consumer towards development of sustainable e-waste management in Malaysia</i>.  
+      <a href="https://iopscience.iop.org/article/10.1088/1755-1315/1167/1/012043" target="_blank">https://iopscience.iop.org/article/10.1088/</a>
+    </li>
+  </ol>
+</div>
+</main>
+
+<!-- FOOTER -->
+<footer class="main-footer">
+   <div class="footer-links">
+    <a href="beranda.html">Beranda</a>
+    <a href="konten.html">Konten</a>
+    <a href="tentang.html">Tentang</a>
+    <a href="kontak.html">Kontak</a>
+  </div>
+  <div class="footer-content">
+    <p>Dibuat Oleh UdangKeju96</p>
+    <p>Ditunjukkan Untuk TechnoVersary2025</p>
+    <p>&copy; Universitas Majalengka</p>
+  </div>
+</footer>
+
+<script>
+document.getElementById("menuBtn").addEventListener("click", function() {
+  document.getElementById("sideNav").classList.toggle("open");
+});
+
+document.querySelectorAll(".dropdown").forEach(drop => {
+  drop.addEventListener("click", (e) => {
+
+    e.stopPropagation();
+
+    document.querySelectorAll(".dropdown").forEach(other => {
+      if (other !== drop) other.classList.remove("active");
+    });
+
+    drop.classList.toggle("active");
+  });
+});
+
+document.addEventListener("click", () => {
+  document.querySelectorAll(".dropdown").forEach(drop => {
+    drop.classList.remove("active");
+  });
+});
+</script>
+
+</body>
+</html>

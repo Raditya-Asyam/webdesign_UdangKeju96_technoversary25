@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kolalimbah</title>
+    <link rel="stylesheet" href="cssweb/gayakami.css">
+</head>
+<body>
+   <header>
+  <!-- Logo Gambar -->
+  <div class="logo">
+  <img src="gambarweb/Logo Kolalimbah.png" alt="Logo">
+</div>
+
+  <!-- Tombol Hamburger -->
+  <button class="menu-btn" id="menuBtn">
+    ☰
+  </button>
+
+  <!-- Fitur Navigasi -->
+  <nav id="sideNav">
+    <a href="beranda.html">Beranda</a>
+    <div class="dropdown">
+    <button class="dropbtn">Konten▾</button>
+    <div class="dropdown-content">
+      <a href="konten.html">Semua</a>
+      <a href="artikel.html">Artikel</a>
+      <a href="video.html">Video</a>
+    </div>
+  </div>
+    <a href="tentang.html">Tentang</a>
+    <a href="kontak.html">Kontak</a>
+  </nav>
+</header>
+
+<!-- TEXT BOX SECTION -->
+<section class="text-box-section">
+  <div class="text-box">
+    <h1 class="text-title">Tentang Kami</h1>
+    <p class="text-description">
+    Situs web ini adalah Kolalimbah.
+    Situs web ini tentang edukasi untuk pengelolaan limbah elektronik 
+      (electronic waste atau e-waste), 
+      dengan informasi yang menarik. bentuk informasinya yaitu artikel dan video.
+      Situs web ini dibuat oleh UdangKeju96 yang tujuannnya untuk memberi edukasi 
+      tentang lingkungan untuk masyarakat yang luas. Situs web ini terbuka untuk 
+      untuk publik yang besar.
+    </p>
+  </div>
+</section>
+
+<section class="text-box-section-title">
+  <h2>Anggota Tim</h2>
+</section>
+
+
+<section class="profile-bars">
+  <div class="profile-bar">
+    <img src="gambarweb/Raditya.jpg" alt="Profil 1" class="profile-img">
+    <div class="profile-text">
+      <h3>Muhammad Raditya Asyam</h3>
+      <p>No. Telepon: 082317300027</p>
+      <p>Email: radityaasyam86@gmail.com</p>
+    </div>
+  </div>
+
+  <div class="profile-bar">
+    <img src="gambarweb/Sunarjo.jpg" alt="Profil 2" class="profile-img">
+    <div class="profile-text">
+      <h3>Sunarjo</h3>
+      <p>No. Telepon: 0895-3303-09628</p>
+      <p>Email: jajosunarjo@gmail.com</p>
+    </div>
+  </div>
+
+  <div class="profile-bar">
+    <img src="gambarweb/Taufiq.jpg" alt="Profil 3" class="profile-img">
+    <div class="profile-text">
+      <h3>Muhammad Taufiq Hidayat</h3>
+      <p>No. Telepon: 0896-6122-3109</p>
+      <p>Email: muhamadtaufik3425@gmail.com</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer class="main-footer">
+   <div class="footer-links">
+    <a href="beranda.html">Beranda</a>
+    <a href="konten.html">Konten</a>
+    <a href="tentang.html">Tentang</a>
+    <a href="kontak.html">Kontak</a>
+  </div>
+  <div class="footer-content">
+    <p>Dibuat Oleh UdangKeju96</p>
+    <p>Ditunjukkan Untuk TechnoVersary2025</p>
+    <p>&copy; Universitas Majalengka</p>
+  </div>
+</footer>
+
+<script>
+document.getElementById("menuBtn").addEventListener("click", function() {
+  document.getElementById("sideNav").classList.toggle("open");
+});
+
+document.querySelectorAll(".dropdown").forEach(drop => {
+  drop.addEventListener("click", (e) => {
+
+    e.stopPropagation();
+
+    document.querySelectorAll(".dropdown").forEach(other => {
+      if (other !== drop) other.classList.remove("active");
+    });
+
+    drop.classList.toggle("active");
+  });
+});
+
+document.addEventListener("click", () => {
+  document.querySelectorAll(".dropdown").forEach(drop => {
+    drop.classList.remove("active");
+  });
+});
+</script>
+
+</body>
+</html>

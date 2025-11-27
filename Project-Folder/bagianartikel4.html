@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kolalimbah</title>
+    <link rel="stylesheet" href="cssweb/gayakami.css">
+</head>
+<body>
+<header>
+  <!-- Logo Gambar -->
+  <div class="logo">
+  <img src="gambarweb/Logo Kolalimbah.png" alt="Logo">
+</div>
+
+  <!-- Tombol Hamburger -->
+  <button class="menu-btn" id="menuBtn">
+    ☰
+  </button>
+
+  <!-- Fitur Navigasi -->
+  <nav id="sideNav">
+    <a href="beranda.html">Beranda</a>
+    <div class="dropdown">
+    <button class="dropbtn">Konten▾</button>
+    <div class="dropdown-content">
+      <a href="konten.html">Semua</a>
+      <a href="artikel.html">Artikel</a>
+      <a href="video.html">Video</a>
+    </div>
+  </div>
+    <a href="tentang.html">About</a>
+    <a href="kontak.html">Contact</a>
+  </nav>
+</header>
+
+<main class="article-container">
+  <h1 class="article-title">Analisis Data Limbah Elektronik</h1>
+  <img src="gambarweb/DATA ANALISIS E-WASTE 0.jpg" alt="Article Image" class="article-image">
+  <img src="gambarweb/DATA ANALISIS E-WASTE 1.png" alt="Article Image" class="article-image">
+  <img src="gambarweb/DATA ANALISIS E-WASTE 2.png" alt="Article Image" class="article-image">
+  <img src="gambarweb/DATA ANALISIS E-WASTE 3.png" alt="Article Image" class="article-image">
+  <img src="gambarweb/DATA ANALISIS E-WASTE 4.png" alt="Article Image" class="article-image">
+  <img src="gambarweb/DATA ANALISIS E-WASTE 5.png" alt="Article Image" class="article-image">
+  
+
+  <div class="article-meta">
+  <span class="article-author">Ditulis oleh: Juliana Negrete</span>
+  <span class="article-date">Diterbitkan di: 27 Februari 2016</span>
+</div>
+
+  <div class="article-text">
+    <p>
+     Diatas itu adalah gambar yang dibuat oleh Juliana Negrete untuk analisis data limbah elektronik
+     atau e-waste.
+    <p>
+  </div>
+
+<div class="article-references">
+  <h2>Referensi</h2>
+  <ol>
+    <li>
+      Juliana Negrete (2016). <i>E-waste Data analysis</i>.  
+      <a href="https://jnegretep.wordpress.com/2016/02/27/e-waste-data-analysis/" target="_blank">https://jnegretep.wordpress.com/2016/02/27/</a>
+    </li>
+  </ol>
+</div>
+</main>
+
+<!-- FOOTER -->
+<footer class="main-footer">
+   <div class="footer-links">
+    <a href="beranda.html">Beranda</a>
+    <a href="konten.html">Konten</a>
+    <a href="tentang.html">Tentang</a>
+    <a href="kontak.html">Kontak</a>
+  </div>
+  <div class="footer-content">
+    <p>Dibuat Oleh UdangKeju96</p>
+    <p>Ditunjukkan Untuk TechnoVersary2025</p>
+    <p>&copy; Universitas Majalengka</p>
+  </div>
+</footer>
+
+<script>
+document.getElementById("menuBtn").addEventListener("click", function() {
+  document.getElementById("sideNav").classList.toggle("open");
+});
+
+document.querySelectorAll(".dropdown").forEach(drop => {
+  drop.addEventListener("click", (e) => {
+
+    e.stopPropagation();
+
+    document.querySelectorAll(".dropdown").forEach(other => {
+      if (other !== drop) other.classList.remove("active");
+    });
+
+    drop.classList.toggle("active");
+  });
+});
+
+document.addEventListener("click", () => {
+  document.querySelectorAll(".dropdown").forEach(drop => {
+    drop.classList.remove("active");
+  });
+});
+</script>
+
+</body>
+</html>
