@@ -1,11 +1,12 @@
 # Raditya-Asyam-webdesign_UdangKeju96_technoversary25
-1. Nama Anggota:
+1. Nama Kelompok: UdangKeju96
+2. Nama Anggota:
 - Muhammad Raditya Asyam
-- Sunarjo
+- Sunarjo 
 - Muhammad Taufiq Hidayat
-2. Asal Instansi: Universitas Majalengka
-3. Judul Website: Kolalimbah (Pengelolaan Limbah Elektronik)
-4. Cara Instalasi & Menjalankan Proyek:
+3. Asal Instansi: Universitas Majalengka
+4. Judul Website: Kolalimbah (Pengelolaan Limbah Elektronik)
+5. Cara Instalasi & Menjalankan Proyek:
 - Download proyek dari repository ini 
 - Setelah berhasil download, jalankan proyek ini di Visual Studio Code
-- Setelah itu, jalankan proyek ini dengan Start Debugging file HTML atau menggunakan fitur ekstensi VSCODE Live Server di file HTML
+- Setelah itu, jalankan proyek ini dengan Start Debugging file HTML atau menggunakan fitur ekstensi VSCODE Live Server di file HTML 
